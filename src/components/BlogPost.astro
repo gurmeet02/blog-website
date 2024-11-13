@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+import SampleImg from "../../public/sample.jpg";
+---
+
+<section
+  class="border-[1.5px] rounded-lg transition-all hover:underline cursor-pointer hover:bg-gray-50 hover:scale-[102%]"
+>
+  <Image src={SampleImg} alt="Sample Image" class="rounded-t-lg" />
+  <main class="p-4">
+    <h3 class="text-2xl font-medium">Blog title</h3>
+    <p class="text-sm py-2 leading-snug">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat atque
+      illum exercitationem...
+    </p>
+  </main>
+</section>
