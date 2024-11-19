@@ -1,17 +1,19 @@
 ---
 import { Image } from "astro:assets";
-import SampleImg from "../../public/sample.jpg";
+const { title, image, description, id } = Astro.props;
 ---
 
-<section
+<a
+  href=`/blog/${id}`
   class="border-[1.5px] rounded-lg transition-all hover:underline cursor-pointer hover:bg-gray-50 hover:scale-[102%]"
 >
-  <Image src={SampleImg} alt="Sample Image" class="rounded-t-lg" />
+  <Image src={image} alt="Sample Image" class="rounded-t-lg aspect-video" />
   <main class="p-4">
-    <h3 class="text-2xl font-medium">Blog title</h3>
+    <h3 class="text-2xl font-medium">
+      {title.length >= 36 ? title.slice(0, 36) : title}
+    </h3>
     <p class="text-sm py-2 leading-snug">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat atque
-      illum exercitationem...
+      {description ? description : null}
     </p>
   </main>
-</section>
+</a>

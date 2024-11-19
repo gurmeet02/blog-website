@@ -1,0 +1,143 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+export async function getStaticPaths() {
+  const data = [
+    {
+      id: 1,
+      title: "How to Build a Minimalist Wardrobe",
+      description:
+        "Learn how to create a versatile and stylish wardrobe with a few essential pieces that can be mixed and matched for any occasion.",
+    },
+    {
+      id: 2,
+      title: "The Ultimate Guide to Sustainable Living",
+      description:
+        "Explore simple yet effective ways to reduce your carbon footprint, from eco-friendly shopping tips to sustainable home practices.",
+    },
+    {
+      id: 3,
+      title: "5 Must-Read Books for Personal Growth",
+      description:
+        "Check out this list of thought-provoking books that can help you develop a positive mindset and unlock your full potential.",
+    },
+    {
+      id: 4,
+      title: "The Best Coffee Shops in [Your City]",
+      description:
+        "Discover hidden gems and popular spots for the perfect cup of coffee, along with cozy atmospheres for working or relaxing.",
+    },
+    {
+      id: 5,
+      title: "How to Start a Successful Side Hustle",
+      description:
+        "Turn your passions into profits! This guide covers everything you need to know about starting and growing a side business.",
+    },
+    {
+      id: 6,
+
+      title: "10 Ways to Boost Your Productivity at Work",
+      description:
+        "From time management techniques to mindset shifts, these tips will help you stay focused, motivated, and efficient throughout your workday.",
+    },
+    {
+      id: 7,
+
+      title: "Exploring the Future of Artificial Intelligence",
+      description:
+        "An in-depth look at how AI is shaping industries, from healthcare to finance, and what it means for the future of work and society.",
+    },
+    {
+      id: 8,
+
+      title: "Why You Should Start Meditating Today",
+      description:
+        "A beginner's guide to meditation, including the health benefits, different techniques, and tips for making it part of your daily routine.",
+    },
+    {
+      id: 9,
+
+      title: "How to Create a Stunning Home Office on a Budget",
+      description:
+        "Transform your workspace with affordable furniture, decor, and organizational hacks to maximize both comfort and productivity.",
+    },
+
+    {
+      id: 21,
+      title: "Traveling on a Budget: Tips for Saving on Your Next Trip",
+      description:
+        "Find out how to travel without breaking the bank, with money-saving strategies for flights, accommodations, food, and activities.",
+    },
+  ];
+
+  return data.map(({ id, title, description }) => {
+    return {
+      params: { id },
+      props: { title, description },
+    };
+  });
+}
+
+const { title, description } = Astro.props;
+---
+
+<MainLayout title={title}>
+  <section class="container max-w-max py-24">
+    <h1 class="text-5xl font-bold tracking-wide pt-8 pb-20 text-center">
+      {title}
+    </h1>
+    <p class="text-lg tracking-wide">
+      {description}
+      <br />
+      <br />
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate maiores
+      voluptates quibusdam tenetur, accusantium voluptatem odio sapiente fuga eveniet
+      a placeat dolor perspiciatis, sunt quas neque impedit corrupti aspernatur debitis
+      sequi nemo non eius earum delectus? Non dicta commodi veniam porro, error harum?
+      Rerum voluptatum perspiciatis architecto tempora velit autem incidunt odit
+      dolorem magnam mollitia sit numquam perferendis nostrum, excepturi quod molestiae
+      hic facere aspernatur illum odio eaque aut minima reiciendis. Sed aliquid dolorum,
+      ab iste, ipsum officiis facere eveniet ea aut labore officia consequuntur delectus
+      provident aspernatur non quae voluptate molestias excepturi quasi autem illum
+      aliquam. Numquam vero, mollitia assumenda sit tempore quasi soluta. Aut facere,
+      saepe distinctio modi iure quidem dolor doloremque accusamus! Ratione doloribus
+      inventore alias nostrum neque possimus quos rerum ex, harum modi sed eligendi,
+      fugit suscipit quia nobis autem consequuntur molestiae quisquam unde, porro
+      assumenda animi? Cum nobis, est tenetur, sunt suscipit magni, non debitis odit
+      autem rerum voluptatibus labore officia pariatur iusto accusamus voluptatum
+      doloribus ex officiis cumque libero. Dolore laudantium nulla nihil sunt alias!
+      Earum ab eveniet praesentium modi voluptatum. Blanditiis neque possimus corporis
+      quam eveniet officia repudiandae est pariatur a natus laboriosam, unde, iusto,
+      numquam repellat error.
+      <br />
+      <br />
+      Dolore laudantium nulla nihil sunt alias! Earum ab eveniet praesentium modi
+      voluptatum. Blanditiis neque possimus corporis quam eveniet officia repudiandae
+      est pariatur a natus laboriosam, unde, iusto, numquam repellat error! Facilis
+      quaerat aliquam minima dolor non explicabo, quae possimus neque dolores, Blanditiis
+      neque possimus corporis quam eveniet officia repudiandae est pariatur a natus
+      laboriosam, unde, iusto, numquam repellat error! Facilis quaerat aliquam minima
+      dolor non explicabo, quae possimus neque dolores.
+      <br />
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate maiores
+      voluptates quibusdam tenetur, accusantium voluptatem odio sapiente fuga eveniet
+      a placeat dolor perspiciatis, sunt quas neque impedit corrupti aspernatur debitis
+      sequi nemo non eius earum delectus? Non dicta commodi veniam porro, error harum?
+      Rerum voluptatum perspiciatis architecto tempora velit autem incidunt odit
+      dolorem magnam mollitia sit numquam perferendis nostrum, excepturi quod molestiae
+      hic facere aspernatur illum odio eaque aut minima reiciendis. Sed aliquid dolorum,
+      ab iste, ipsum officiis facere eveniet ea aut labore officia consequuntur.
+      <br />
+      <br />
+      delectus provident aspernatur non quae voluptate molestias excepturi quasi
+      autem illum aliquam. Numquam vero, mollitia assumenda sit tempore quasi soluta.
+      Aut facere, saepe distinctio modi iure quidem dolor doloremque accusamus! Ratione
+      doloribus inventore alias nostrum neque possimus quos rerum ex, harum modi
+      sed eligendi, fugit suscipit quia nobis autem consequuntur molestiae quisquam
+      unde, porro assumenda animi? Cum nobis, est tenetur, sunt suscipit magni, non
+      debitis odit autem rerum voluptatibus labore officia pariatur iusto accusamus
+      voluptatum doloribus ex officiis cumque libero. Dolore laudantium nulla nihil
+      sunt alias! Earum ab eveniet praesentium modi voluptatum, inventore alias nostrum
+      neque possimus quos rerum ex.
+    </p>
+  </section>
+</MainLayout>
